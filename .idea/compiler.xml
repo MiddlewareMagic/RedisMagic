@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="redis-api" />
-        <module name="redis-core" />
+        <module name="redis-magic-utils" />
+        <module name="redis-magic-parent" />
+        <module name="redis-magic-core" />
+        <module name="redis-magic-common" />
       </profile>
     </annotationProcessing>
   </component>
