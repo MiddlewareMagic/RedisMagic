@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.middlewaremagic</groupId>
+    <groupId>github.middlewaremagic.redismagic</groupId>
     <artifactId>redis-magic</artifactId>
     <packaging>pom</packaging>
     <modules>
@@ -29,7 +29,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.github.middlewaremagic</groupId>
+                <groupId>github.middlewaremagic.redismagic</groupId>
                 <artifactId>redis-magic-parent</artifactId>
                 <version>${revision}</version>
             </dependency>
@@ -41,6 +41,11 @@
             <dependency>
                 <groupId>com.github.midlewaremagic</groupId>
                 <artifactId>redis-magic-utils</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-core</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

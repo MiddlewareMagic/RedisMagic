@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.midlewaremagic</groupId>
+        <groupId>github.middlewaremagic.redismagic</groupId>
         <artifactId>redis-magic-base</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
