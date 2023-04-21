@@ -19,6 +19,7 @@
         <resource.delimiter>@</resource.delimiter>
 
         <java.version>17</java.version>
+        <!-- 工程构建过程中读取源码时使用的字符集 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
@@ -32,6 +33,8 @@
         <junit.version>4.12</junit.version>
     </properties>
 
+    <!-- 使用dependencyManagement标签配置对依赖的管理 -->
+    <!-- 被管理的依赖并没有真正被引入到工程 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -84,16 +87,20 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- build 标签：用来配置对构建过程的定制 -->
     <build>
         <finalName>${project.artifactId}</finalName>
         <pluginManagement>
+            <!-- plugins 标签：定制化构建过程中所使用到的插件 -->
             <plugins>
                 <!--maven-compiler-plugin插件可以指定项目源码的jdk版本，编译后的jdk版本，以及编码。-->
                 <!-- 参考: https://blog.csdn.net/liupeifeng3514/article/details/80236077 -->
                 <plugin>
+                    <!-- 插件的坐标。此处引用的 maven-compiler-plugin 插件不是第三方的，是一个 Maven 自带的插件。 -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
+                    <!-- configuration 标签：配置 maven-compiler-plugin 插件 -->
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
