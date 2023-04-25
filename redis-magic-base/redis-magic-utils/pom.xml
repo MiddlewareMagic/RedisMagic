@@ -12,7 +12,10 @@
     </parent>
 
     <artifactId>redis-magic-utils</artifactId>
-    <version>${revision}</version>
+
+    <dependencies>
+
+    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>

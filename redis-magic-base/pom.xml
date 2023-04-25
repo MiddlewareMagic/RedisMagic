@@ -24,7 +24,6 @@
     <!-- 把版本号去掉就表示子工程中这个依赖的版本由父工程决定。 -->
     <!-- 具体来说是由父工程的dependencyManagement来决定。 -->
     <dependencies>
-        <!-- 在dependency标签内使用具体的坐标依赖我们需要的一个jar包 -->
         <dependency>
             <groupId>github.middlewaremagic.redismagic</groupId>
             <artifactId>redis-magic-parent</artifactId>

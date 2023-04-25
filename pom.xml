@@ -10,6 +10,9 @@
     <modules>
         <module>redis-magic-base</module>
         <module>redis-magic-parent</module>
+        <module>redis-magic-server</module>
+        <module>redis-magic-cache</module>
+        <module>redis-magic-test</module>
     </modules>
     <version>${revision}</version>
 
@@ -26,17 +29,66 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
 
+        <!-- 工具依赖 -->
         <netty4.version>4.1.66.Final</netty4.version>
         <affinity.version>3.21ea5</affinity.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <junit.version>4.12</junit.version>
+        <hutool.version>5.8.15</hutool.version>
+        <guava.version>31.1-jre</guava.version>
+        <orika.version>1.5.4</orika.version>
+        <easyexcel.version>3.1.3</easyexcel.version>
+        <jasypt.version>3.0.4</jasypt.version>
+        <lombok.version>1.18.26</lombok.version>
+        <cglib.version>3.3.0</cglib.version>
     </properties>
 
     <!-- 使用dependencyManagement标签配置对依赖的管理 -->
     <!-- 被管理的依赖并没有真正被引入到工程 -->
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--bean之间的转换-->
+            <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-core</artifactId>
+                <version>${orika.version}</version>
+            </dependency>
+            <!--excel工具类-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+            <!--配置文件加解密-->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+            <!--hutool工具类-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!--谷歌工具类-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
@@ -82,6 +134,11 @@
             <dependency>
                 <groupId>github.middlewaremagic.redismagic</groupId>
                 <artifactId>redis-magic-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-cache</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

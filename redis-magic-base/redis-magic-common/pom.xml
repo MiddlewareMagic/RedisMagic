@@ -12,7 +12,9 @@
     </parent>
 
     <artifactId>redis-magic-common</artifactId>
-    <version>${revision}</version>
+
+    <dependencies>
+    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -33,5 +35,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
