@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>github.middlewaremagic.redismagic</groupId>
+        <artifactId>redis-magic</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>redis-magic-base</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>redis-magic-common</module>
+        <module>redis-magic-utils</module>
+        <module>redis-magic-core</module>
+    </modules>
+
+    <!-- 子工程引用父工程中的依赖信息时，可以把版本号去掉。 -->
+    <!-- 把版本号去掉就表示子工程中这个依赖的版本由父工程决定。 -->
+    <!-- 具体来说是由父工程的dependencyManagement来决定。 -->
+    <dependencies>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-parent</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!--源码包-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <!--jar包-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
