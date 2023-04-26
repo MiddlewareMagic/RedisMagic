@@ -1,6 +1,5 @@
 package github.middlewaremagic.redismagic.support.persist;
 
-import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.file.FileWriter;
 import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.json.JSONUtil;

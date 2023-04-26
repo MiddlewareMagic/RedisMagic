@@ -1,7 +1,6 @@
 package github.middlewaremagic.redismagic.support.struct.lru.impl;
 
 import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.log.Log;
 import github.middlewaremagic.redismagic.api.ICacheEntry;
 import github.middlewaremagic.redismagic.exception.CacheRuntimeException;
 import github.middlewaremagic.redismagic.model.CacheEntry;

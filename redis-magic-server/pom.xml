@@ -12,6 +12,13 @@
 
     <artifactId>redis-magic-server</artifactId>
     <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>redis-magic-cache</module>
+        <module>redis-magic-network-server</module>
+        <module>redis-magic-resp-server</module>
+    </modules>
 
     <!--将规定默认引入的依赖有哪些-->
     <dependencies>

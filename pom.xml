@@ -9,11 +9,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>redis-magic-base</module>
+        <module>redis-magic-client</module>
         <module>redis-magic-parent</module>
         <module>redis-magic-server</module>
-        <module>redis-magic-cache</module>
         <module>redis-magic-test</module>
-        <module>redis-magic-resp</module>
     </modules>
     <version>${revision}</version>
 
@@ -22,7 +21,7 @@
         <!-- resource.delimiter 标签参考：https://www.jianshu.com/p/4410613bb36f -->
         <resource.delimiter>@</resource.delimiter>
 
-        <java.version>17</java.version>
+        <java.version>8</java.version>
         <!-- 工程构建过程中读取源码时使用的字符集 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -140,6 +139,26 @@
             <dependency>
                 <groupId>github.middlewaremagic.redismagic</groupId>
                 <artifactId>redis-magic-cache</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-network-client</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-network-server</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-resp-client</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-resp-server</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

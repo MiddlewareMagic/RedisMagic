@@ -9,9 +9,14 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
-    <artifactId>redis-magic-resp</artifactId>
+    <artifactId>redis-magic-client</artifactId>
     <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>redis-magic-network-client</module>
+        <module>redis-magic-resp-client</module>
+    </modules>
 
     <!--将规定默认引入的依赖有哪些-->
     <dependencies>

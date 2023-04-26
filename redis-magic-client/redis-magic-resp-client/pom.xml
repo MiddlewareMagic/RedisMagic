@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>github.middlewaremagic.redismagic</groupId>
-        <artifactId>redis-magic</artifactId>
+        <artifactId>redis-magic-client</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>redis-magic-cache</artifactId>
+    <artifactId>redis-magic-resp-client</artifactId>
     <version>${revision}</version>
 
     <!--将规定默认引入的依赖有哪些-->
