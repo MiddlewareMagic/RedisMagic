@@ -13,6 +13,7 @@
         <module>redis-magic-server</module>
         <module>redis-magic-cache</module>
         <module>redis-magic-test</module>
+        <module>redis-magic-resp</module>
     </modules>
     <version>${revision}</version>
 
