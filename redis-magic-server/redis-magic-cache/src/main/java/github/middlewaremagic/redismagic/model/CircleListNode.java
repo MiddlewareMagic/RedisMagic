@@ -29,7 +29,7 @@ public class CircleListNode<K,V> {
     private boolean accessFlag = false;
 
     /**
-     * 后一个节点
+     * 前一个节点
      * @since 0.0.15
      */
     private CircleListNode<K, V> pre;

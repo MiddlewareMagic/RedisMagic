@@ -2,44 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>redis-magic-server</artifactId>
         <groupId>github.middlewaremagic.redismagic</groupId>
-        <artifactId>redis-magic</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>redis-magic-server</artifactId>
+    <artifactId>redis-magic-server-main</artifactId>
     <version>${revision}</version>
-    <packaging>pom</packaging>
 
-    <modules>
-        <module>redis-magic-cache</module>
-        <module>redis-magic-network-server</module>
-        <module>redis-magic-resp-server</module>
-        <module>redis-magic-server-main</module>
-    </modules>
-
-    <!--将规定默认引入的依赖有哪些-->
-    <dependencies>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-parent</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-utils</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-common</artifactId>
-        </dependency>
-    </dependencies>
+    <dependencies></dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>

@@ -32,6 +32,7 @@ public class CacheLoadDbJson<K,V> implements ICacheLoad<K,V> {
 
     @Override
     public void load(ICache<K, V> cache) {
+        // 如果文件很大 会不会出现问题 ?
         List<String> lines = FileUtil.readLines(dbPath, CharsetUtil.CHARSET_UTF_8);
         log.info("[load] 开始处理 path: {}", dbPath);
         if(CollectionUtil.isEmpty(lines)) {
