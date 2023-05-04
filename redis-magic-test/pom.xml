@@ -19,6 +19,10 @@
             <groupId>github.middlewaremagic.redismagic</groupId>
             <artifactId>redis-magic-cache</artifactId>
         </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-resp-client</artifactId>
+        </dependency>
 
         <!--============================== INTER ==============================-->
         <dependency>
