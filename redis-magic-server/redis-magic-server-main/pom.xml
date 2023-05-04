@@ -13,7 +13,20 @@
     <artifactId>redis-magic-server-main</artifactId>
     <version>${revision}</version>
 
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-resp-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-resp-client</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
