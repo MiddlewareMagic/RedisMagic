@@ -1,14 +1,14 @@
-package github.middlewaremagic.redismagic.datatype;
+package github.middlewaremagic.redismagic.resp;
 
 import github.middlewaremagic.redismagic.parser.CommandParser;
 import org.junit.Test;
 
-public class CommandParseRespTest {
+public class ParseRespCommandTest {
 
     private final CommandParser commandParser = new CommandParser();
 
     @Test
-    public void testEvaluateResp() {
+    public void parseRespTest() {
         String resp = "*2\r\n" +
                 "*3\r\n" +
                 ":1\r\n" +
@@ -18,7 +18,6 @@ public class CommandParseRespTest {
                 "+Hello\r\n" +
                 "-World\r\n";
         System.out.println(commandParser.parseResp(resp));
-
     }
 
 }

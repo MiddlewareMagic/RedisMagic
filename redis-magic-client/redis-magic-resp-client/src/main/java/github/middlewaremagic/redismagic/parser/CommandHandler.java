@@ -40,14 +40,13 @@ public class CommandHandler {
     }
 
     public List<String> sendCommand(String longCommands) throws IOException {
-        String parser = this.parse(longCommands);
-        String sendRESP = this.sendRESP(parser);
+        String parse = this.parse(longCommands);
+        String sendRESP = this.sendRESP(parse);
         return this.parseResp(sendRESP);
     }
 
     public void close() throws IOException {
         socket.close();
     }
-
 
 }
