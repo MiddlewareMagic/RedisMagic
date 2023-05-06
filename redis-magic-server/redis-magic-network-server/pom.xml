@@ -17,15 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-parent</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>github.middlewaremagic.redismagic</groupId>
-            <artifactId>redis-magic-utils</artifactId>
+            <artifactId>redis-magic-resp-server</artifactId>
         </dependency>
     </dependencies>
 
