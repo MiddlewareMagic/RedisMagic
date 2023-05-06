@@ -1,22 +1,21 @@
-package github.middlewaremagic.redismagic.datatype.impl;
+package github.middlewaremagic.redismagic.datastruct.impl;
 
 
-import github.middlewaremagic.redismagic.datatype.BytesWrapper;
-import github.middlewaremagic.redismagic.datatype.RedisData;
+import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
+import github.middlewaremagic.redismagic.datastruct.RedisData;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @author lilan
+ * @author gaoxiang
  */
 public class RedisHash implements RedisData {
 
     private final Map<BytesWrapper, BytesWrapper> map = new HashMap<>();
 
     public int put(BytesWrapper field, BytesWrapper value) {
-
         return map.put(field, value) == null ? 1 : 0;
     }
 

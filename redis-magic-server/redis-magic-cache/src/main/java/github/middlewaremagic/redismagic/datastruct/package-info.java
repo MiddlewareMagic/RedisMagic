@@ -5,4 +5,4 @@
  * @email: 630268696@qq.com
  * @create: 2023-05-04 10:31
  **/
-package github.middlewaremagic.redismagic.datatype;
+package github.middlewaremagic.redismagic.datastruct;

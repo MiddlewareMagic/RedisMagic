@@ -1,10 +1,13 @@
 package github.middlewaremagic.redismagic;
 
-import com.sun.tools.jdeprscan.scan.Scan;
 import github.middlewaremagic.redismagic.api.ICache;
 import github.middlewaremagic.redismagic.bs.CacheBs;
-import github.middlewaremagic.redismagic.datatype.BytesWrapper;
-import github.middlewaremagic.redismagic.datatype.RedisData;
+import github.middlewaremagic.redismagic.command.CommandFactory;
+import github.middlewaremagic.redismagic.command.CommandHandler;
+import github.middlewaremagic.redismagic.core.RedisCore;
+import github.middlewaremagic.redismagic.core.impl.RedisCoreImpl;
+import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
+import github.middlewaremagic.redismagic.datastruct.RedisData;
 import github.middlewaremagic.redismagic.parser.CommandParser;
 
 import java.util.Scanner;
@@ -22,12 +25,14 @@ public class RedisMagicApplication {
 
     CommandParser commandParser;
 
-    RedisMagicApplication main;
+    private static RedisMagicApplication main;
+
+    private final RedisCore redisCore = new RedisCoreImpl();
 
     Thread mainThread;
 
-    public RedisMagicApplication getInstance() {
-        if(main == null) {
+    public static RedisMagicApplication getInstance() {
+        if (main == null) {
             main = new RedisMagicApplication();
         }
         return main;
@@ -43,19 +48,25 @@ public class RedisMagicApplication {
     }
 
     public void start() {
-        mainThread.start();
+        mainThread.run();
     }
 
     class MainThread implements Runnable {
 
         @Override
         public void run() {
-            Scanner scanner = new Scanner(System.in);
-
-            while(scanner.hasNext()) {
-                String order = scanner.nextLine();
+            Scanner scan = new Scanner(System.in);
+            CommandHandler commandHandler = new CommandHandler(redisCore);
+            while (!scan.hasNext("#")) {
+                String longCommands = scan.nextLine();
+                String resp = commandParser.parse(longCommands);
+                System.out.println(commandParser.parseResp(resp));
+                CommandFactory.from(commandParser.parseResp(resp), commandHandler.getRedisCore());
 
             }
+            scan.close();
+            System.out.println("over");
+
         }
 
         private String parseCommand(String order) {

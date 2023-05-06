@@ -15,6 +15,26 @@
 
     <!--将规定默认引入的依赖有哪些-->
     <dependencies>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-parent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-resp-client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

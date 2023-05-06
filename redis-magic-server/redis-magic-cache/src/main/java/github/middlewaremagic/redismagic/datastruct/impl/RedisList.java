@@ -1,7 +1,7 @@
-package github.middlewaremagic.redismagic.datatype.impl;
+package github.middlewaremagic.redismagic.datastruct.impl;
 
-import github.middlewaremagic.redismagic.datatype.BytesWrapper;
-import github.middlewaremagic.redismagic.datatype.RedisData;
+import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
+import github.middlewaremagic.redismagic.datastruct.RedisData;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author lilan
+ * @author gaoxiang
  */
 public class RedisList implements RedisData {
 
-    private final Deque<BytesWrapper> deque   = new LinkedList<>();
+    private final Deque<BytesWrapper> deque = new LinkedList<>();
 
     public void lpush(BytesWrapper... values) {
         for (BytesWrapper value : values) {
@@ -21,8 +21,7 @@ public class RedisList implements RedisData {
         }
     }
 
-    public int size()
-    {
+    public int size() {
         return deque.size();
     }
 

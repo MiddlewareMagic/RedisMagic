@@ -1,4 +1,5 @@
-package github.middlewaremagic.redismagic.parser;/*
+package github.middlewaremagic.redismagic.parser;
+/*
  * ClassName: CommandHandler
  * Description:
  * @Author: zjh

@@ -1,4 +1,5 @@
-package github.middlewaremagic.redismagic.utils;/*
+package github.middlewaremagic.redismagic.utils;
+/*
  * ClassName: TruncateString
  * Description:
  * @Author: zjh

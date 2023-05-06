@@ -1,4 +1,5 @@
-package github.middlewaremagic.redismagic.datatype;/*
+package github.middlewaremagic.redismagic.datatype;
+/*
  * ClassName: Resp
  * Description:
  * @Author: zjh

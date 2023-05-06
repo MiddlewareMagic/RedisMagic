@@ -1,7 +1,7 @@
-package github.middlewaremagic.redismagic.datatype.impl;
+package github.middlewaremagic.redismagic.datastruct.impl;
 
-import github.middlewaremagic.redismagic.datatype.BytesWrapper;
-import github.middlewaremagic.redismagic.datatype.RedisData;
+import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
+import github.middlewaremagic.redismagic.datastruct.RedisData;
 
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 /**
- * @author lilan
+ * @author gaoxiang
  */
 public class RedisZset implements RedisData {
 

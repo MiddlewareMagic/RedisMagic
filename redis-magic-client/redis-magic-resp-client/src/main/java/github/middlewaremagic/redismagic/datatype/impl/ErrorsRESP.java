@@ -1,4 +1,5 @@
-package github.middlewaremagic.redismagic.datatype.impl;/*
+package github.middlewaremagic.redismagic.datatype.impl;
+/*
  * ClassName: ErrorsRESP
  * Description:
  * @Author: zjh
