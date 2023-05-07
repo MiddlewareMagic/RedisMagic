@@ -2,8 +2,8 @@ package github.middlewaremagic.redismagic;
 
 import github.middlewaremagic.redismagic.api.ICache;
 import github.middlewaremagic.redismagic.bs.CacheBs;
-import github.middlewaremagic.redismagic.command.CommandFactory;
-import github.middlewaremagic.redismagic.command.CommandHandler;
+import github.middlewaremagic.redismagic.commandstruct.CommandFactory;
+import github.middlewaremagic.redismagic.commandstruct.CommandHandler;
 import github.middlewaremagic.redismagic.core.RedisCore;
 import github.middlewaremagic.redismagic.core.impl.RedisCoreImpl;
 import github.middlewaremagic.redismagic.datastruct.BytesWrapper;

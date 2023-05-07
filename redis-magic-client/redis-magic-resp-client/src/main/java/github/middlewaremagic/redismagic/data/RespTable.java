@@ -1,13 +1,9 @@
-package github.middlewaremagic.redismagic.parser;
-/*
- * ClassName: CommandParser
- * Description:
- * @Author: zjh
- * @Create: 2023/4/26
- */
+package github.middlewaremagic.redismagic.data;
 
 import github.middlewaremagic.redismagic.datatype.RESP;
 import github.middlewaremagic.redismagic.datatype.impl.*;
+import github.middlewaremagic.redismagic.parser.UnWrapperCommandList;
+import lombok.Data;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,11 +11,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class CommandParser {
+/**
+ * @program: `redisRewrite
+ * @description: RESP 状态转换表
+ * @author: gaoxiang
+ * @email: 630268696@qq.com
+ * @create: 2023-05-06 15:31
+ **/
+@Data
+public class RespTable {
 
-    private static final Map<String, RESP> respMap = new HashMap<>();
+    final static Map<String, RESP> respMap = new HashMap<>();
 
-    public CommandParser() {
+    static {
         ArraysRESP arraysRESP = new ArraysRESP();
         respMap.putIfAbsent(arraysRESP.startFlag(), arraysRESP);
 
@@ -34,9 +38,10 @@ public class CommandParser {
 
         ErrorsRESP errorsRESP = new ErrorsRESP();
         respMap.putIfAbsent(errorsRESP.startFlag(), errorsRESP);
+
     }
 
-    public String parse(String longCommands) {
+    public static String parse(String longCommands) {
 
         List<String> params = Arrays.stream(longCommands.split("\\s+")).collect(Collectors.toList());
 
@@ -49,15 +54,14 @@ public class CommandParser {
         return String.join("", parse);
     }
 
-    public List<String> parseResp(String longCommands) {
+    public static List<String> parseResp(String longCommands) {
         List<String> results = new UnWrapperCommandList();
         reverseParse(longCommands, results);
         return results;
     }
 
-    public String reverseParse(String longCommands, List<String> results) {
+    public static String reverseParse(String longCommands, List<String> results) {
         char startFlag = longCommands.charAt(0);
-        return this.respMap.get(Character.toString(startFlag)).reverseParse(longCommands, results);
+        return respMap.get(Character.toString(startFlag)).reverseParse(longCommands, results);
     }
-
 }

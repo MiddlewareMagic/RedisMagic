@@ -1,0 +1,23 @@
+@startuml
+enum CommandType {
+    -支持的命令与其对应内容
+}
+interface Command {
+    -命令操作相关方法接口
+}
+interface WriteCommand {
+    +aof相关操作接口
+    `aof可视为一种客户端
+}
+class CommandHandler {
+    +ICache实例
+    `后版本修改为任务链模式
+}
+class CommandFactory {
+    -工厂模式创建命令解析对象
+    +通过自定义工厂模式实现
+}
+class Get {
+    -具体命令实现类
+}
+@enduml

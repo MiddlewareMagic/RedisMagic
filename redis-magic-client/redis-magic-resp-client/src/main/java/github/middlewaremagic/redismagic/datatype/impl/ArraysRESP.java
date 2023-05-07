@@ -6,6 +6,7 @@ package github.middlewaremagic.redismagic.datatype.impl;
  * @Create: 2023/4/26
  */
 
+import github.middlewaremagic.redismagic.data.RespTable;
 import github.middlewaremagic.redismagic.parser.CommandParser;
 import github.middlewaremagic.redismagic.parser.CommandList;
 import github.middlewaremagic.redismagic.datatype.RESP;
@@ -24,10 +25,7 @@ import java.util.List;
  */
 public class ArraysRESP implements RESP {
 
-    private final CommandParser commandParser;
-
-    public ArraysRESP(CommandParser commandParser) {
-        this.commandParser = commandParser;
+    public ArraysRESP() {
     }
 
     @Override
@@ -52,7 +50,7 @@ public class ArraysRESP implements RESP {
         } else {
             for (int i = 0; i < arrLen; i++) {
                 //递归解析
-                after = this.commandParser.reverseParse(after, results);
+                after = RespTable.reverseParse(after, results);
             }
         }
         return after;

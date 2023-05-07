@@ -14,6 +14,10 @@
     <artifactId>redis-magic-common</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-utils</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

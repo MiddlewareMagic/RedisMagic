@@ -1,6 +1,7 @@
 package github.middlewaremagic.redismagic.netty;
 
-import github.middlewaremagic.redismagic.MainNioServerHandler;
+import github.middlewaremagic.redismagic.netty.handler.MainNioServerHandler;
+import github.middlewaremagic.redismagic.netty.handler.MainNioServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -25,6 +26,8 @@ public class SingleNioServer {
 
     private MainNioServerHandler mainNioServerHandler;
 
+    private MainNioServerInitializer mainNioServerInitializer;
+
     public static SingleNioServer getInstance(int port) {
         if(singleNioServer == null)
             singleNioServer = new SingleNioServer(port);
@@ -33,6 +36,7 @@ public class SingleNioServer {
 
     private SingleNioServer(int port) {
         this.port = port;
+        mainNioServerInitializer = new MainNioServerInitializer();
     }
 
     public void run() throws Exception {
@@ -42,13 +46,7 @@ public class SingleNioServer {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
-
-                        @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new MainNioServerHandler());
-                        }
-                    })
+                    .childHandler(new MainNioServerInitializer())
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
             // 绑定端口, 接收客户端链接
