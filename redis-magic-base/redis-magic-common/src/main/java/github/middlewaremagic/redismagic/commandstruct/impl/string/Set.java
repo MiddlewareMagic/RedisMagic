@@ -1,14 +1,16 @@
 package github.middlewaremagic.redismagic.commandstruct.impl.string;
 
+import github.middlewaremagic.redismagic.api.ICache;
 import github.middlewaremagic.redismagic.commandstruct.CommandType;
 import github.middlewaremagic.redismagic.commandstruct.WriteCommand;
-import github.middlewaremagic.redismagic.core.RedisCore;
 import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
 import github.middlewaremagic.redismagic.datastruct.impl.RedisString;
-
-import java.util.List;
+import github.middlewaremagic.redismagic.respstruct.BulkString;
+import github.middlewaremagic.redismagic.respstruct.Resp;
+import io.netty.channel.ChannelHandlerContext;
 
 public class Set implements WriteCommand {
+
     private BytesWrapper key;
     private BytesWrapper value;
     private long timeout = -1;
@@ -21,18 +23,18 @@ public class Set implements WriteCommand {
     }
 
     @Override
-    public void setContent(List<String> commandList) {
-        key = new BytesWrapper(commandList.get(1).getBytes());
-        value = new BytesWrapper(commandList.get(2).getBytes());
+    public void setContent(Resp[] array) {
+        key = ((BulkString) array[1]).getContent();
+        value = ((BulkString) array[2]).getContent();
         int index = 3;
-        while (index < commandList.size()) {
-            String string = commandList.get(index);
+        while (index < array.length) {
+            String string = ((BulkString) array[index]).getContent().toUtf8String();
             index++;
             if (string.startsWith("EX")) {
-                String seconds = commandList.get(index);
+                String seconds = ((BulkString) array[index]).getContent().toUtf8String();
                 timeout = Integer.parseInt(seconds) * 1000;
             } else if (string.startsWith("PX")) {
-                String seconds = commandList.get(index);
+                String seconds = ((BulkString) array[index]).getContent().toUtf8String();
                 timeout = Integer.parseInt(seconds);
             } else if (string.equals("NX")) {
                 notExistSet = true;
@@ -42,23 +44,23 @@ public class Set implements WriteCommand {
         }
     }
 
-//    @Override
-//    public void handle(ChannelHandlerContext ctx, RedisCore redisCore) {
-//        if (notExistSet && redisCore.exist(key)) {
-//            ctx.writeAndFlush(BulkString.NullBulkString);
-//        } else if (existSet && !redisCore.exist(key)) {
-//            ctx.writeAndFlush(BulkString.NullBulkString);
-//        } else {
-//            if (timeout != -1) {
-//                timeout += System.currentTimeMillis();
-//            }
-//            RedisString stringData = new RedisString();
-//            stringData.setValue(value);
-//            stringData.setTimeout(timeout);
-//            redisCore.put(key, stringData);
-//            ctx.writeAndFlush(new SimpleString("OK"));
-//        }
-//    }
+    @Override
+    public void handle(ChannelHandlerContext ctx, ICache iCache) {
+        if (notExistSet && iCache.containsKey(key)) {
+            ctx.writeAndFlush(BulkString.NullBulkString);
+        } else if (existSet && !iCache.containsKey(key)) {
+            ctx.writeAndFlush(BulkString.NullBulkString);
+        } else {
+            if (timeout != -1) {
+                timeout += System.currentTimeMillis();
+            }
+            RedisString stringData = new RedisString();
+            stringData.setValue(value);
+            stringData.setTimeout(timeout);
+            iCache.put(key, stringData);
+            ctx.writeAndFlush(new SimpleString("OK"));
+        }
+    }
 
     @Override
     public void handle(RedisCore redisCore) {
@@ -72,8 +74,9 @@ public class Set implements WriteCommand {
             }
             RedisString stringData = new RedisString();
             stringData.setValue(value);
-//            stringData.setTimeout(timeout);
+            stringData.setTimeout(timeout);
             redisCore.put(key, stringData);
+
         }
     }
 }

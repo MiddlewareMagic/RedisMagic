@@ -6,10 +6,10 @@ import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
 import github.middlewaremagic.redismagic.datastruct.RedisData;
 import github.middlewaremagic.redismagic.datastruct.impl.RedisList;
 import github.middlewaremagic.redismagic.respstruct.BulkString;
+import github.middlewaremagic.redismagic.respstruct.Errors;
 import github.middlewaremagic.redismagic.respstruct.Resp;
 import github.middlewaremagic.redismagic.respstruct.RespInt;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.unix.Errors;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -43,8 +43,8 @@ public abstract class AbstractPush implements WriteCommand {
     @Override
     public void handle(ChannelHandlerContext ctx, ICache redisCore) {
 
-        Object value = redisCore.get(key);
-        if(!(value instanceof RedisData)) {
+        Object obj = redisCore.get(key);
+        if(!(obj instanceof RedisData)) {
             log.error("ICache type error. Please check out. {}", redisCore.toString());
             return;
         }
@@ -65,7 +65,12 @@ public abstract class AbstractPush implements WriteCommand {
 
     @Override
     public void handle(ICache redisCore) {
-        RedisData redisData = redisCore.get(key);
+        Object obj = redisCore.get(key);
+        if(!(obj instanceof RedisData)) {
+            log.error("ICache type error. Please check out. {}", redisCore.toString());
+            return;
+        }
+        RedisData redisData = (RedisData) obj;
         if (redisData == null) {
             RedisList redisList = new RedisList();
             biConsumer.accept(redisList, value);
