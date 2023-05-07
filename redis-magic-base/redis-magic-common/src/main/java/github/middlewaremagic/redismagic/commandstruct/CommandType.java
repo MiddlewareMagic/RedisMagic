@@ -4,15 +4,28 @@ package github.middlewaremagic.redismagic.commandstruct;/*
  * @Author: zjh
  * @Create: 2023/5/5
  */
-
-//import github.middlewaremagic.redismagic.commandstruct.impl.connection.*;
-//import github.middlewaremagic.redismagic.commandstruct.impl.hash.*;
-//import github.middlewaremagic.redismagic.commandstruct.impl.key.*;
-//import github.middlewaremagic.redismagic.commandstruct.impl.list.*;
-//import github.middlewaremagic.redismagic.commandstruct.impl.server.*;
-//import github.middlewaremagic.redismagic.commandstruct.impl.set.*;
-
+import github.middlewaremagic.redismagic.commandstruct.impl.connection.Auth;
+import github.middlewaremagic.redismagic.commandstruct.impl.connection.Ping;
+import github.middlewaremagic.redismagic.commandstruct.impl.connection.Quit;
+import github.middlewaremagic.redismagic.commandstruct.impl.connection.Select;
+import github.middlewaremagic.redismagic.commandstruct.impl.hash.Hdel;
+import github.middlewaremagic.redismagic.commandstruct.impl.hash.Hscan;
+import github.middlewaremagic.redismagic.commandstruct.impl.hash.Hset;
+import github.middlewaremagic.redismagic.commandstruct.impl.key.*;
+import github.middlewaremagic.redismagic.commandstruct.impl.list.Lpush;
+import github.middlewaremagic.redismagic.commandstruct.impl.list.Lrange;
+import github.middlewaremagic.redismagic.commandstruct.impl.list.Lrem;
+import github.middlewaremagic.redismagic.commandstruct.impl.list.Rpush;
+import github.middlewaremagic.redismagic.commandstruct.impl.server.Client;
+import github.middlewaremagic.redismagic.commandstruct.impl.server.Config;
+import github.middlewaremagic.redismagic.commandstruct.impl.server.Info;
+import github.middlewaremagic.redismagic.commandstruct.impl.set.Sadd;
+import github.middlewaremagic.redismagic.commandstruct.impl.set.Srem;
+import github.middlewaremagic.redismagic.commandstruct.impl.set.Sscan;
 import github.middlewaremagic.redismagic.commandstruct.impl.string.*;
+import github.middlewaremagic.redismagic.commandstruct.impl.zset.Zadd;
+import github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrem;
+import github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrevrange;
 //import github.middlewaremagic.redismagic.commandstruct.impl.zset.*;
 
 import java.util.function.Supplier;

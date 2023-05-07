@@ -31,17 +31,17 @@ public class Hset implements WriteCommand {
     }
 
     @Override
-    public void handle(ChannelHandlerContext ctx, ICache redisCore) {
-        Object obj = redisCore.get(key);
+    public void handle(ChannelHandlerContext ctx, ICache cache) {
+        Object obj = cache.get(key);
         if(!(obj instanceof RedisData)) {
-            log.error("ICache type error. Please check out. {}", redisCore.toString());
+            log.error("ICache type error. Please check out. {}", cache.toString());
             return;
         }
         RedisData redisData = (RedisData) obj;
         if (redisData == null) {
             RedisHash redisHash = new RedisHash();
             int put = redisHash.put(field, value);
-            redisCore.put(key, redisHash);
+            cache.put(key, redisHash);
             ctx.writeAndFlush(new RespInt(put));
         } else if (redisData instanceof RedisHash) {
             RedisHash redisHash = (RedisHash) redisData;
@@ -53,17 +53,17 @@ public class Hset implements WriteCommand {
     }
 
     @Override
-    public void handle(ICache redisCore) {
-        Object obj = redisCore.get(key);
+    public void handle(ICache cache) {
+        Object obj = cache.get(key);
         if(!(obj instanceof RedisData)) {
-            log.error("ICache type error. Please check out. {}", redisCore.toString());
+            log.error("ICache type error. Please check out. {}", cache.toString());
             return;
         }
         RedisData redisData = (RedisData) obj;
         if (redisData == null) {
             RedisHash redisHash = new RedisHash();
             redisHash.put(field, value);
-            redisCore.put(key, redisHash);
+            cache.put(key, redisHash);
         } else if (redisData instanceof RedisHash) {
             RedisHash redisHash = (RedisHash) redisData;
             redisHash.put(field, value);

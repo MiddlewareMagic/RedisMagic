@@ -7,6 +7,7 @@ import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
 import github.middlewaremagic.redismagic.datastruct.impl.RedisString;
 import github.middlewaremagic.redismagic.respstruct.BulkString;
 import github.middlewaremagic.redismagic.respstruct.Resp;
+import github.middlewaremagic.redismagic.respstruct.SimpleString;
 import io.netty.channel.ChannelHandlerContext;
 
 public class Set implements WriteCommand {
@@ -56,17 +57,17 @@ public class Set implements WriteCommand {
             }
             RedisString stringData = new RedisString();
             stringData.setValue(value);
-            stringData.setTimeout(timeout);
             iCache.put(key, stringData);
+            iCache.expireAt(key, timeout);
             ctx.writeAndFlush(new SimpleString("OK"));
         }
     }
 
     @Override
-    public void handle(RedisCore redisCore) {
-        if (notExistSet && redisCore.exist(key)) {
+    public void handle(ICache iCache) {
+        if (notExistSet && iCache.containsKey(key)) {
 
-        } else if (existSet && !redisCore.exist(key)) {
+        } else if (existSet && !iCache.containsKey(key)) {
 
         } else {
             if (timeout != -1) {
@@ -74,9 +75,8 @@ public class Set implements WriteCommand {
             }
             RedisString stringData = new RedisString();
             stringData.setValue(value);
-            stringData.setTimeout(timeout);
-            redisCore.put(key, stringData);
-
+            iCache.put(key, stringData);
+            iCache.expireAt(key, timeout);
         }
     }
 }

@@ -11,6 +11,11 @@ import github.middlewaremagic.redismagic.respstruct.Resp;
 import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
 
+import io.netty.channel.ChannelHandlerContext;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
 @Slf4j
 public class Get implements Command {
     private BytesWrapper key;
@@ -26,10 +31,10 @@ public class Get implements Command {
     }
 
     @Override
-    public void handle(ChannelHandlerContext ctx, ICache iCache) {
-        Object obj = iCache.get(key);
-        if(!(obj instanceof RedisData)) {
-            log.error("ICache type error. Please check out. {}", iCache.toString());
+    public void handle(ChannelHandlerContext ctx, ICache cache) {
+        Object obj = cache.get(key);
+        if (!(obj instanceof RedisData)) {
+            log.error("ICache type error. Please check out. {}", cache.toString());
             return;
         }
         RedisData redisData = (RedisData) obj;

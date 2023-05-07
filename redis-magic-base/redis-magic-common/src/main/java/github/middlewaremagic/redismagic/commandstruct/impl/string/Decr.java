@@ -78,6 +78,7 @@ public class Decr implements WriteCommand {
                 --v;
                 ((RedisString) redisData).setValue(new BytesWrapper(Format.toByteArray(v)));
             } catch (NumberFormatException exception) {
+                log.error("");
             }
         } else {
             throw new UnsupportedOperationException();
