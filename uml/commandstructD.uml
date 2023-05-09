@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>github.middlewaremagic.redismagic.commandstruct</OriginalElement>
+  <nodes>
+    <node x="942.9307440925087" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Scan</node>
+    <node x="1020.9307440925087" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Set</node>
+    <node x="0.0" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Type</node>
+    <node x="1314.9307440925088" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrevrange</node>
+    <node x="2044.9307440925088" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.connection.Quit</node>
+    <node x="576.9307440925087" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.AbstractPush</node>
+    <node x="1928.9307440925088" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Keys</node>
+    <node x="116.0" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.AbstractScan</node>
+    <node x="1984.9307440925088" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Decr</node>
+    <node x="2320.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Ttl</node>
+    <node x="222.0" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.set.Sscan</node>
+    <node x="261.0" y="475.0">github.middlewaremagic.redismagic.commandstruct.CommandType</node>
+    <node x="2160.9307440925086" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.connection.Ping</node>
+    <node x="662.9307440925087" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.server.Client</node>
+    <node x="1168.9307440925086" y="0.0">github.middlewaremagic.redismagic.commandstruct.Command</node>
+    <node x="1240.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.SetEx</node>
+    <node x="0.0" y="475.0">github.middlewaremagic.redismagic.commandstruct.CommandFactory</node>
+    <node x="1788.9307440925088" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.connection.Select</node>
+    <node x="1496.9307440925088" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrem</node>
+    <node x="1174.9307440925086" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.server.Config</node>
+    <node x="2276.9307440925086" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.connection.Auth</node>
+    <node x="1576.9307440925088" y="150.0">github.middlewaremagic.redismagic.commandstruct.WriteCommand</node>
+    <node x="2424.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.zset.Zadd</node>
+    <node x="1752.9307440925088" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Mset</node>
+    <node x="802.9307440925087" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Exists</node>
+    <node x="1124.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.hash.Hset</node>
+    <node x="94.0" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.hash.Hscan</node>
+    <node x="2216.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Del</node>
+    <node x="788.9307440925087" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Incr</node>
+    <node x="1868.9307440925088" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.set.Sadd</node>
+    <node x="1612.9307440925088" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.key.Expire</node>
+    <node x="1368.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.string.SetNx</node>
+    <node x="904.9307440925087" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.hash.Hdel</node>
+    <node x="824.2102815485168" y="390.0">github.middlewaremagic.redismagic.commandstruct.impl.list</node>
+    <node x="2100.9307440925086" y="300.0">github.middlewaremagic.redismagic.commandstruct.impl.set.Srem</node>
+    <node x="1058.9307440925086" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.server.Info</node>
+    <node x="2392.9307440925086" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Mget</node>
+    <node x="328.0" y="150.0">github.middlewaremagic.redismagic.commandstruct.impl.string.Get</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.server.Config" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="0.0" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Expire" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="0.0" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Get" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="370.0" y="80.0" />
+      <point x="1188.342508798391" y="80.0" />
+      <point x="-46.58823529411757" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Set" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1062.9307440925086" y="240.0" />
+      <point x="1616.4601558572147" y="240.0" />
+      <point x="-56.470588235294144" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.server.Info" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="1106.9307440925086" y="130.0" />
+      <point x="1227.1660382101559" y="130.0" />
+      <point x="-7.764705882352928" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Incr" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="836.9307440925087" y="220.0" />
+      <point x="1593.871920563097" y="220.0" />
+      <point x="-79.05882352941171" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Del" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="2258.9307440925086" y="240.0" />
+      <point x="1729.401332327803" y="240.0" />
+      <point x="56.470588235294144" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.SetNx" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1422.9307440925086" y="270.0" />
+      <point x="1650.3425087983912" y="270.0" />
+      <point x="-22.588235294117567" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.set.Srem" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="2148.9307440925086" y="250.0" />
+      <point x="1718.1072146807442" y="250.0" />
+      <point x="45.17647058823536" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Exists" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="862.9307440925087" y="110.0" />
+      <point x="1211.63662644545" y="110.0" />
+      <point x="-23.294117647058783" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.connection.Ping" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="2208.9307440925086" y="80.0" />
+      <point x="1281.5189793866261" y="80.0" />
+      <point x="46.58823529411757" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.hash.Hdel" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="952.9307440925087" y="230.0" />
+      <point x="1605.1660382101559" y="230.0" />
+      <point x="-67.76470588235293" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.hash.Hscan" target="github.middlewaremagic.redismagic.commandstruct.impl.AbstractScan">
+      <point x="0.0" y="-20.0" />
+      <point x="148.0" y="280.0" />
+      <point x="164.0" y="280.0" />
+      <point x="-48.0" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.connection.Auth" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="2324.9307440925086" y="70.0" />
+      <point x="1289.2836852689793" y="70.0" />
+      <point x="54.352941176470495" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.AbstractPush" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="672.9307440925087" y="210.0" />
+      <point x="1582.5778029160383" y="210.0" />
+      <point x="-90.3529411764705" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.server.Client" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="1.1368683772161603E-13" y="-20.0" />
+      <point x="722.9307440925088" y="100.0" />
+      <point x="1203.8719205630969" y="100.0" />
+      <point x="-31.05882352941171" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.list" target="github.middlewaremagic.redismagic.commandstruct.impl.AbstractPush">
+      <point x="0.0" y="-20.0" />
+      <point x="912.2102815485168" y="360.0" />
+      <point x="672.9307440925087" y="360.0" />
+      <point x="0.0" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.set.Sadd" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1916.9307440925088" y="270.0" />
+      <point x="1695.5189793866264" y="270.0" />
+      <point x="22.588235294117567" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.zset.Zadd" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="2472.9307440925086" y="220.0" />
+      <point x="1751.9895676219205" y="220.0" />
+      <point x="79.05882352941171" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.WriteCommand" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="1672.9307440925088" y="120.0" />
+      <point x="1250.4601558572144" y="120.0" />
+      <point x="15.529411764705856" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Mset" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1800.9307440925088" y="280.0" />
+      <point x="1684.2248617395676" y="280.0" />
+      <point x="11.294117647058783" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrevrange" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="1392.9307440925088" y="130.0" />
+      <point x="1242.6954499748617" y="130.0" />
+      <point x="7.764705882352928" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.list" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="-58.66666666666663" y="-20.0" />
+      <point x="853.5436148818502" y="370.0" />
+      <point x="422.5" y="370.0" />
+      <point x="422.5" y="90.0" />
+      <point x="1196.1072146807442" y="90.0" />
+      <point x="-38.82352941176464" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.AbstractScan" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="212.0" y="70.0" />
+      <point x="1180.5778029160383" y="70.0" />
+      <point x="-54.352941176470495" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.connection.Select" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="1848.9307440925088" y="110.0" />
+      <point x="1258.2248617395676" y="110.0" />
+      <point x="23.294117647058783" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Decr" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="2032.9307440925088" y="260.0" />
+      <point x="1706.8130970336854" y="260.0" />
+      <point x="33.88235294117658" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.hash.Hset" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1172.9307440925086" y="250.0" />
+      <point x="1627.7542735042734" y="250.0" />
+      <point x="-45.17647058823536" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.set.Sscan" target="github.middlewaremagic.redismagic.commandstruct.impl.AbstractScan">
+      <point x="0.0" y="-20.0" />
+      <point x="276.0" y="280.0" />
+      <point x="260.0" y="280.0" />
+      <point x="48.0" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.Mget" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="2440.9307440925086" y="60.0" />
+      <point x="1297.048391151332" y="60.0" />
+      <point x="62.11764705882342" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.zset.Zrem" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1544.9307440925088" y="280.0" />
+      <point x="1661.63662644545" y="280.0" />
+      <point x="-11.294117647058783" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.string.SetEx" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="1294.9307440925086" y="260.0" />
+      <point x="1639.0483911513322" y="260.0" />
+      <point x="-33.88235294117658" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Keys" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="1976.9307440925088" y="100.0" />
+      <point x="1265.9895676219203" y="100.0" />
+      <point x="31.05882352941171" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Type" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="48.0" y="60.0" />
+      <point x="1172.8130970336852" y="60.0" />
+      <point x="-62.11764705882342" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Ttl" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="0.0" y="-20.0" />
+      <point x="2362.9307440925086" y="230.0" />
+      <point x="1740.6954499748617" y="230.0" />
+      <point x="67.76470588235293" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.list" target="github.middlewaremagic.redismagic.commandstruct.WriteCommand">
+      <point x="58.66666666666663" y="-20.0" />
+      <point x="970.8769482151835" y="370.0" />
+      <point x="2531.4307440925086" y="370.0" />
+      <point x="2531.4307440925086" y="210.0" />
+      <point x="1763.2836852689795" y="210.0" />
+      <point x="90.35294117647072" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.connection.Quit" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="2092.9307440925086" y="90.0" />
+      <point x="1273.7542735042734" y="90.0" />
+      <point x="38.82352941176464" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.commandstruct.impl.key.Scan" target="github.middlewaremagic.redismagic.commandstruct.Command">
+      <point x="0.0" y="-20.0" />
+      <point x="990.9307440925087" y="120.0" />
+      <point x="1219.4013323278027" y="120.0" />
+      <point x="-15.529411764705856" y="20.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5760188087774295" x="1266.0" y="257.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -11,11 +11,6 @@ import github.middlewaremagic.redismagic.respstruct.Resp;
 import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
 
-import io.netty.channel.ChannelHandlerContext;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.List;
-
 @Slf4j
 public class Get implements Command {
     private BytesWrapper key;

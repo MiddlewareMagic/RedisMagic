@@ -26,6 +26,10 @@
             <groupId>github.middlewaremagic.redismagic</groupId>
             <artifactId>redis-magic-resp-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>github.middlewaremagic.redismagic</groupId>
+            <artifactId>redis-magic-network-server</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -6,15 +6,15 @@ import github.middlewaremagic.redismagic.respstruct.Resp;
 import github.middlewaremagic.redismagic.respstruct.RespArray;
 import github.middlewaremagic.redismagic.respstruct.SimpleString;
 import github.middlewaremagic.redismagic.utils.TRACEID;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
+@Slf4j
 public class CommandFactory {
-    private static final Logger LOGGER = Logger.getLogger(CommandFactory.class);
 
     static Map<String, Supplier<Command>> map = new HashMap<>();
 
@@ -29,7 +29,7 @@ public class CommandFactory {
         String commandName = ((BulkString) array[0]).getContent().toUtf8String().toLowerCase();
         Supplier<Command> supplier = map.get(commandName);
         if (supplier == null) {
-            LOGGER.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：" + commandName);
+            log.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：" + commandName);
             System.out.println("不支持的命令：" + commandName);
             return null;
         } else {
@@ -38,7 +38,7 @@ public class CommandFactory {
                 command.setContent(array);
                 return command;
             } catch (Throwable e) {
-                LOGGER.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：{},数据读取异常" + commandName);
+                log.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：{},数据读取异常" + commandName);
                 e.printStackTrace();
                 return null;
             }
@@ -49,14 +49,14 @@ public class CommandFactory {
         String commandName = string.getContent().toLowerCase();
         Supplier<Command> supplier = map.get(commandName);
         if (supplier == null) {
-            LOGGER.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：" + commandName);
+            log.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：" + commandName);
             System.out.println("不支持的命令：" + commandName);
             return null;
         } else {
             try {
                 return supplier.get();
             } catch (Throwable e) {
-                LOGGER.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：{},数据读取异常" + commandName);
+                log.debug("traceId:" + TRACEID.currentTraceId() + " 不支持的命令：{},数据读取异常" + commandName);
                 e.printStackTrace();
                 return null;
             }

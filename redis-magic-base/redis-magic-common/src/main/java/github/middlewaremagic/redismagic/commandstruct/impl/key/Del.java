@@ -7,7 +7,6 @@ import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
 import github.middlewaremagic.redismagic.datastruct.RedisData;
 import github.middlewaremagic.redismagic.respstruct.BulkString;
 import github.middlewaremagic.redismagic.respstruct.Resp;
-import github.middlewaremagic.redismagic.respstruct.RespInt;
 import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
 

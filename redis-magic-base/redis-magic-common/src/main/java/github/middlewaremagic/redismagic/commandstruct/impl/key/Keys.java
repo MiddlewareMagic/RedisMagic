@@ -4,7 +4,6 @@ import github.middlewaremagic.redismagic.api.ICache;
 import github.middlewaremagic.redismagic.commandstruct.Command;
 import github.middlewaremagic.redismagic.commandstruct.CommandType;
 import github.middlewaremagic.redismagic.datastruct.BytesWrapper;
-import github.middlewaremagic.redismagic.datastruct.RedisData;
 import github.middlewaremagic.redismagic.respstruct.BulkString;
 import github.middlewaremagic.redismagic.respstruct.Resp;
 import github.middlewaremagic.redismagic.respstruct.RespArray;

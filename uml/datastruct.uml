@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>github.middlewaremagic.redismagic.datastruct</OriginalElement>
+  <nodes>
+    <node x="0.0" y="113.5">github.middlewaremagic.redismagic.datastruct.impl.RedisHash</node>
+    <node x="795.0" y="113.5">github.middlewaremagic.redismagic.datastruct.impl.RedisList</node>
+    <node x="316.0" y="113.5">github.middlewaremagic.redismagic.datastruct.impl.RedisZset</node>
+    <node x="592.5" y="0.0">github.middlewaremagic.redismagic.datastruct.RedisData</node>
+    <node x="1043.0" y="113.5">github.middlewaremagic.redismagic.datastruct.impl.RedisSet</node>
+    <node x="0.0" y="247.0">github.middlewaremagic.redismagic.datastruct.impl.RedisZset.ZsetKey</node>
+    <node x="266.0" y="247.0">github.middlewaremagic.redismagic.datastruct.BytesWrapper</node>
+    <node x="566.0" y="90.0">github.middlewaremagic.redismagic.datastruct.impl.RedisString</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="github.middlewaremagic.redismagic.datastruct.impl.RedisZset" target="github.middlewaremagic.redismagic.datastruct.RedisData">
+      <point x="0.0" y="-32.5" />
+      <point x="431.0" y="70.0" />
+      <point x="639.3" y="70.0" />
+      <point x="-31.200000000000045" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.datastruct.impl.RedisHash" target="github.middlewaremagic.redismagic.datastruct.RedisData">
+      <point x="0.0" y="-32.5" />
+      <point x="148.0" y="60.0" />
+      <point x="608.1" y="60.0" />
+      <point x="-62.39999999999998" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.datastruct.impl.RedisList" target="github.middlewaremagic.redismagic.datastruct.RedisData">
+      <point x="0.0" y="-32.5" />
+      <point x="909.0" y="70.0" />
+      <point x="701.7" y="70.0" />
+      <point x="31.200000000000045" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.datastruct.impl.RedisSet" target="github.middlewaremagic.redismagic.datastruct.RedisData">
+      <point x="0.0" y="-32.5" />
+      <point x="1137.0" y="60.0" />
+      <point x="732.9" y="60.0" />
+      <point x="62.39999999999998" y="20.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.datastruct.impl.RedisString" target="github.middlewaremagic.redismagic.datastruct.RedisData">
+      <point x="0.0" y="-56.0" />
+      <point x="0.0" y="20.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="615.5" y="179.5" />
+  <SelectedNodes>
+    <node>github.middlewaremagic.redismagic.datastruct.impl.RedisHash</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

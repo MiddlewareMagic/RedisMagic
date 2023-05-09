@@ -24,7 +24,8 @@ public class Select implements Command {
     }
 
     @Override
-    public void handle(ChannelHandlerContext ctx, ICache cache) {
+    public void
+    handle(ChannelHandlerContext ctx, ICache cache) {
         if (index > 0) {
             SimpleString ok = new SimpleString("-ERR invalid DB index");
             ctx.writeAndFlush(ok);

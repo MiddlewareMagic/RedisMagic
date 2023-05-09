@@ -32,8 +32,7 @@
         <!-- 工具依赖 -->
         <netty4.version>4.1.66.Final</netty4.version>
         <affinity.version>3.21ea5</affinity.version>
-        <log4j.version>1.2.17</log4j.version>
-        <slf4j-api.version>1.7.25</slf4j-api.version>
+
         <junit.version>4.12</junit.version>
         <hutool.version>5.8.15</hutool.version>
         <guava.version>31.1-jre</guava.version>
@@ -42,6 +41,11 @@
         <jasypt.version>3.0.4</jasypt.version>
         <lombok.version>1.18.26</lombok.version>
         <cglib.version>3.3.0</cglib.version>
+
+        <!--  日志依赖  -->
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j-api.version>2.0.7</slf4j-api.version>
+        <logback.version>1.4.7</logback.version>
     </properties>
 
     <!-- 使用dependencyManagement标签配置对依赖的管理 -->
@@ -99,15 +103,21 @@
                 <artifactId>affinity</artifactId>
                 <version>${affinity.version}</version>
             </dependency>
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
+            <!--  日志相关依赖  -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
