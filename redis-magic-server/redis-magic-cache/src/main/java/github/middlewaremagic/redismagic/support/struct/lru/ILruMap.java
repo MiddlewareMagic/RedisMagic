@@ -7,7 +7,7 @@ import github.middlewaremagic.redismagic.api.ICacheEntry;
  * @description: LRU map 接口
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 15:17
+ * @create: 2023-04-29 15:17
  **/
 public interface ILruMap<K,V> {
 

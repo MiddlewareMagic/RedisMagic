@@ -7,7 +7,7 @@ import java.util.Objects;
  * @description: 包含频率信息的节点
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:46
+ * @create: 2023-04-29 14:46
  */
 public class FreqNode<K,V> {
 

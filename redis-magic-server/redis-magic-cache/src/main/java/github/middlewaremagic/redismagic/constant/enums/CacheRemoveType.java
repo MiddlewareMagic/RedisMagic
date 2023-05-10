@@ -5,7 +5,7 @@ package github.middlewaremagic.redismagic.constant.enums;
  * @description: 缓存移除类型
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 11:05
+ * @create: 2023-04-29 11:05
  **/
 public enum CacheRemoveType {
 

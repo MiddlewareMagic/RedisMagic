@@ -9,7 +9,7 @@ import github.middlewaremagic.redismagic.api.ICacheEvictContext;
  * @description: 丢弃策略-抽象实现类
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:46
+ * @create: 2023-04-29 14:46
  */
 public abstract class AbstractCacheEvict<K,V> implements ICacheEvict<K,V> {
 

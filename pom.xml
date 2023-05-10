@@ -176,6 +176,11 @@
                 <artifactId>redis-magic-server-main</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>github.middlewaremagic.redismagic</groupId>
+                <artifactId>redis-magic-client-main</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

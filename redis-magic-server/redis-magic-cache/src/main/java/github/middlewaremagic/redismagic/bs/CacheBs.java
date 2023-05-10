@@ -19,7 +19,7 @@ import java.util.Map;
  * @description: 缓存引导类
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:26
+ * @create: 2023-04-29 14:26
  **/
 public class CacheBs<K,V> {
 
@@ -30,7 +30,6 @@ public class CacheBs<K,V> {
      * @param <K> key
      * @param <V> value
      * @return this
-     * @since 0.0.2
      */
     public static <K,V> CacheBs<K,V> newInstance() {
         return new CacheBs<>();
@@ -38,43 +37,36 @@ public class CacheBs<K,V> {
 
     /**
      * map 实现
-     * @since 0.0.2
      */
     private Map<K,V> map = new HashMap<>();
 
     /**
      * 大小限制
-     * @since 0.0.2
      */
     private int size = Integer.MAX_VALUE;
 
     /**
      * 驱除策略
-     * @since 0.0.2
      */
     private ICacheEvict<K,V> evict = CacheEvicts.fifo();
 
     /**
      * 删除监听类
-     * @since 0.0.6
      */
     private final List<ICacheRemoveListener<K,V>> removeListeners = CacheRemoveListeners.defaults();
 
     /**
      * 慢操作监听类
-     * @since 0.0.9
      */
     private final List<ICacheSlowListener> slowListeners = CacheSlowListeners.none();
 
     /**
      * 加载策略
-     * @since 0.0.7
      */
     private ICacheLoad<K,V> load = CacheLoads.none();
 
     /**
      * 持久化实现策略
-     * @since 0.0.8
      */
     private ICachePersist<K,V> persist = CachePersists.none();
 
@@ -82,7 +74,6 @@ public class CacheBs<K,V> {
      * map 实现
      * @param map map
      * @return this
-     * @since 0.0.2
      */
     public CacheBs<K, V> map(Map<K, V> map) {
         if(map == null)
@@ -92,14 +83,12 @@ public class CacheBs<K,V> {
     }
 
     /**
-     * 设置 size 信息
+     * 设置 size 信息 (限制 redis key 数量)
      * @param size size
      * @return this
-     * @since 0.0.2
      */
     public CacheBs<K, V> size(int size) {
         ArgUtil.notNegative(size, "size");
-
         this.size = size;
         return this;
     }
@@ -108,7 +97,6 @@ public class CacheBs<K,V> {
      * 设置驱除策略
      * @param evict 驱除策略
      * @return this
-     * @since 0.0.2
      */
     public CacheBs<K, V> evict(ICacheEvict<K, V> evict) {
         ArgUtil.notNull(evict, "evict");
@@ -170,7 +158,7 @@ public class CacheBs<K,V> {
     /**
      * 构建缓存信息
      * @return 缓存信息
-     * @since 0.0.2
+     * 
      */
     public ICache<K,V> build() {
         Cache<K,V> cache = new Cache<>();

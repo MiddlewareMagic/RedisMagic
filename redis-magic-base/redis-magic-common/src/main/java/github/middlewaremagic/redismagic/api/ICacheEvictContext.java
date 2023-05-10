@@ -10,7 +10,7 @@ package github.middlewaremagic.redismagic.api;
  * @description: 驱除策略, 应用于:
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 11:19
+ * @create: 2023-04-29 11:19
  */
 public interface ICacheEvictContext<K,V> {
 

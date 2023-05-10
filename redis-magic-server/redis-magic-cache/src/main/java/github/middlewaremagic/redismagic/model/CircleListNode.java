@@ -6,7 +6,7 @@ package github.middlewaremagic.redismagic.model;
  * @description: 循环链表节点
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:46
+ * @create: 2023-04-29 14:46
  */
 public class CircleListNode<K,V> {
 

@@ -25,15 +25,15 @@
       <point x="506.0999999999999" y="164.0" />
       <point x="38.59999999999991" y="67.0" />
     </edge>
-    <edge source="github.middlewaremagic.redismagic.respstruct.BulkString" target="github.middlewaremagic.redismagic.respstruct.Resp">
-      <point x="0.0" y="-44.5" />
-      <point x="0.0" y="67.0" />
-    </edge>
     <edge source="github.middlewaremagic.redismagic.respstruct.RespArray" target="github.middlewaremagic.redismagic.respstruct.Resp">
       <point x="0.0" y="-44.5" />
       <point x="847.5" y="154.0" />
       <point x="544.6999999999999" y="154.0" />
       <point x="77.19999999999993" y="67.0" />
+    </edge>
+    <edge source="github.middlewaremagic.redismagic.respstruct.BulkString" target="github.middlewaremagic.redismagic.respstruct.Resp">
+      <point x="0.0" y="-44.5" />
+      <point x="0.0" y="67.0" />
     </edge>
     <edge source="github.middlewaremagic.redismagic.respstruct.RespInt" target="github.middlewaremagic.redismagic.respstruct.Resp">
       <point x="0.0" y="-44.5" />
@@ -42,7 +42,7 @@
       <point x="-38.60000000000002" y="67.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="463.0" y="226.5" />
+  <settings layout="Hierarchic Group" zoom="0.7632135306553911" x="463.0" y="226.5" />
   <SelectedNodes>
     <node>github.middlewaremagic.redismagic.respstruct.BulkString</node>
   </SelectedNodes>

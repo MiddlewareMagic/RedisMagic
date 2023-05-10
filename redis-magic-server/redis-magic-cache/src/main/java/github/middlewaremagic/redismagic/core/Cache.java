@@ -18,7 +18,7 @@ import java.util.*;
  * @description: 缓存实现信息定义类
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 11:08
+ * @create: 2023-04-29 11:08
  **/
 public class Cache<K,V> implements ICache<K,V> {
 

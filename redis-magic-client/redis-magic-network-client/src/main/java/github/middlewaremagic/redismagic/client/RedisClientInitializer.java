@@ -1,4 +1,4 @@
-package github.middlewaremagic.redismagic.client.netty;
+package github.middlewaremagic.redismagic.client;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;

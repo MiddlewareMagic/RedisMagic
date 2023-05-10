@@ -1,4 +1,4 @@
-package github.middlewaremagic.redismagic.client.netty;
+package github.middlewaremagic.redismagic.client;
 
 import cn.hutool.json.JSONUtil;
 import io.netty.buffer.ByteBufUtil;

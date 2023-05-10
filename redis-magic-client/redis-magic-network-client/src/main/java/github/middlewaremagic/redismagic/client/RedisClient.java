@@ -1,4 +1,4 @@
-package github.middlewaremagic.redismagic.client.netty;
+package github.middlewaremagic.redismagic.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -65,13 +65,6 @@ public class RedisClient {
         }finally {
             group.shutdownGracefully();
         }
-    }
-
-    public static void main(String[] args) throws Exception{
-        String host = "127.0.0.1";
-        Integer port = 18081;
-        RedisClient client = new RedisClient(host, port);
-        client.start();
     }
 
 }

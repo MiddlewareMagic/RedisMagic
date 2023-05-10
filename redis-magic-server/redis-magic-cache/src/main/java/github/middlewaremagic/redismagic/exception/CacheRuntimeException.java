@@ -5,7 +5,7 @@ package github.middlewaremagic.redismagic.exception;
  * @description: 缓存运行时异常
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:46
+ * @create: 2023-04-29 14:46
  **/
 public class CacheRuntimeException extends RuntimeException{
 

@@ -7,7 +7,7 @@ import github.middlewaremagic.redismagic.api.ICacheEntry;
  * @description: key value 的明细信息
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 14:46
+ * @create: 2023-04-29 14:46
  */
 public class CacheEntry<K,V> implements ICacheEntry<K,V> {
 

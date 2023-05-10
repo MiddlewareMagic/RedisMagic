@@ -5,7 +5,7 @@ package github.middlewaremagic.redismagic.support.proxy;
  * @description: 缓存代理接口
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-25 11:19
+ * @create: 2023-04-29 11:19
  */
 public interface ICacheProxy {
 

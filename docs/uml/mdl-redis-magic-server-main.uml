@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>MODULES</ID>
+  <OriginalElement>mdl-redis-magic-server-main</OriginalElement>
+  <nodes>
+    <node x="0.0" y="213.5">mdl-redis-magic-server-main</node>
+    <node x="429.5" y="427.0">mdl-redis-magic-utils</node>
+    <node x="415.5" y="305.0">mdl-redis-magic-common</node>
+    <node x="410.5" y="366.0">mdl-redis-magic-resp-client</node>
+    <node x="407.5" y="244.0">mdl-redis-magic-resp-server</node>
+    <node x="422.0" y="183.0">mdl-redis-magic-parent</node>
+    <node x="397.0" y="122.0">mdl-redis-magic-network-server</node>
+    <node x="424.5" y="61.0">mdl-redis-magic-cache</node>
+    <node x="428.0" y="0.0">mdl-redis-magic-core</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-common">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-utils">
+      <point x="-82.5" y="5.25" />
+      <point x="247.0" y="259.75" />
+      <point x="247.0" y="432.25" />
+      <point x="-60.5" y="-5.25" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-client" target="mdl-redis-magic-parent">
+      <point x="-79.5" y="-2.625" />
+      <point x="277.0" y="373.875" />
+      <point x="277.0" y="198.75" />
+      <point x="-68.0" y="5.25" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-resp-client">
+      <point x="-82.5" y="8.75" />
+      <point x="287.0" y="263.25" />
+      <point x="287.0" y="368.625" />
+      <point x="-79.5" y="-7.875" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-core">
+      <point x="-93.0" y="-8.75" />
+      <point x="377.0" y="123.75" />
+      <point x="377.0" y="18.375" />
+      <point x="-62.0" y="7.875" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-common">
+      <point x="-93.0" y="5.25" />
+      <point x="307.0" y="137.75" />
+      <point x="307.0" y="311.3" />
+      <point x="-74.5" y="-4.199999999999989" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-resp-server">
+      <point x="83.5" y="1.3125" />
+      <point x="217.0" y="256.25" />
+      <point x="-82.5" y="1.75" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-core">
+      <point x="-82.5" y="-1.75" />
+      <point x="327.0" y="252.75" />
+      <point x="327.0" y="7.875" />
+      <point x="-62.0" y="-2.625" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-resp-client">
+      <point x="-93.0" y="1.75" />
+      <point x="267.0" y="134.25" />
+      <point x="267.0" y="379.125" />
+      <point x="-79.5" y="2.625" />
+    </edge>
+    <edge source="mdl-redis-magic-common" target="mdl-redis-magic-utils">
+      <point x="-74.5" y="8.400000000000006" />
+      <point x="257.0" y="323.9" />
+      <point x="257.0" y="428.75" />
+      <point x="-60.5" y="-8.75" />
+    </edge>
+    <edge source="mdl-redis-magic-common" target="mdl-redis-magic-parent">
+      <point x="-74.5" y="-8.400000000000006" />
+      <point x="317.0" y="307.1" />
+      <point x="317.0" y="202.25" />
+      <point x="-68.0" y="8.75" />
+    </edge>
+    <edge source="mdl-redis-magic-utils" target="mdl-redis-magic-parent">
+      <point x="-60.5" y="-1.75" />
+      <point x="237.0" y="435.75" />
+      <point x="237.0" y="195.25" />
+      <point x="-68.0" y="1.75" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-utils">
+      <point x="-93.0" y="-1.75" />
+      <point x="227.0" y="130.75" />
+      <point x="227.0" y="439.25" />
+      <point x="-60.5" y="1.75" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-resp-client">
+      <point x="83.5" y="6.5625" />
+      <point x="217.0" y="384.375" />
+      <point x="-79.5" y="7.875" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-parent">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-core">
+      <point x="83.5" y="-9.1875" />
+      <point x="217.0" y="2.625" />
+      <point x="-62.0" y="-7.875" />
+    </edge>
+    <edge source="mdl-redis-magic-cache" target="mdl-redis-magic-core">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-client" target="mdl-redis-magic-common">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-network-server">
+      <point x="83.5" y="-3.9375" />
+      <point x="217.0" y="127.25" />
+      <point x="-93.0" y="-5.25" />
+    </edge>
+    <edge source="mdl-redis-magic-cache" target="mdl-redis-magic-common">
+      <point x="-65.5" y="-0.0" />
+      <point x="297.0" y="71.5" />
+      <point x="297.0" y="315.5" />
+      <point x="-74.5" y="-0.0" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-resp-server">
+      <point x="-93.0" y="8.75" />
+      <point x="347.0" y="141.25" />
+      <point x="347.0" y="245.75" />
+      <point x="-82.5" y="-8.75" />
+    </edge>
+    <edge source="mdl-redis-magic-core" target="mdl-redis-magic-parent">
+      <point x="-62.0" y="2.625" />
+      <point x="357.0" y="13.125" />
+      <point x="357.0" y="188.25" />
+      <point x="-68.0" y="-5.25" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-parent">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-client" target="mdl-redis-magic-utils">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-cache">
+      <point x="83.5" y="-6.5625" />
+      <point x="217.0" y="63.10000000000002" />
+      <point x="-65.5" y="-8.399999999999977" />
+    </edge>
+    <edge source="mdl-redis-magic-resp-server" target="mdl-redis-magic-cache">
+      <point x="-82.5" y="-5.25" />
+      <point x="337.0" y="249.25" />
+      <point x="337.0" y="75.69999999999999" />
+      <point x="-65.5" y="4.199999999999989" />
+    </edge>
+    <edge source="mdl-redis-magic-network-server" target="mdl-redis-magic-cache">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-common">
+      <point x="83.5" y="3.9375" />
+      <point x="217.0" y="319.7" />
+      <point x="-74.5" y="4.199999999999989" />
+    </edge>
+    <edge source="mdl-redis-magic-cache" target="mdl-redis-magic-parent">
+      <point x="-65.5" y="8.399999999999977" />
+      <point x="367.0" y="79.89999999999998" />
+      <point x="367.0" y="184.75" />
+      <point x="-68.0" y="-8.75" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-parent">
+      <point x="83.5" y="-1.3125" />
+      <point x="217.0" y="191.75" />
+      <point x="-68.0" y="-1.75" />
+    </edge>
+    <edge source="mdl-redis-magic-cache" target="mdl-redis-magic-utils">
+      <point x="-65.5" y="-4.199999999999989" />
+      <point x="217.0" y="67.30000000000001" />
+      <point x="217.0" y="442.75" />
+      <point x="-60.5" y="5.25" />
+    </edge>
+    <edge source="mdl-redis-magic-server-main" target="mdl-redis-magic-utils">
+      <point x="83.5" y="9.1875" />
+      <point x="217.0" y="446.25" />
+      <point x="-60.5" y="8.75" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1" x="284.8636363636364" y="223.00000000000003" />
+  <SelectedNodes />
+  <Categories />
+</Diagram>
+
