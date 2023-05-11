@@ -5,15 +5,13 @@ package github.middlewaremagic.redismagic.respstruct;
  */
 public class SimpleString implements Resp {
     public static final SimpleString OK = new SimpleString("OK");
-    private final       String       content;
+    private final String content;
 
-    public SimpleString(String content)
-    {
+    public SimpleString(String content) {
         this.content = content;
     }
 
-    public String getContent()
-    {
+    public String getContent() {
         return content;
     }
 }
