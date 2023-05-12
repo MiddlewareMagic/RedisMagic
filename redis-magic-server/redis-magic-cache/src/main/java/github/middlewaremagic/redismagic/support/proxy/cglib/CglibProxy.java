@@ -13,9 +13,8 @@ import java.lang.reflect.Method;
 
 /**
  * CGLIB 代理类
- * @author binbin.hou
+ * @author houbinbin
  * date 2019/3/7
- * @since 0.0.4
  */
 public class CglibProxy implements MethodInterceptor, ICacheProxy {
 

@@ -7,14 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 缓存持久化-适配器模式
- * @author binbin.hou
- * @since 0.0.10
+ * @author gaoxiang
  */
-public class CachePersistAdaptor<K,V> implements ICachePersist<K,V> {
+public abstract class CachePersistAdaptor<K,V> implements ICachePersist<K,V> {
 
     /**
      * 持久化
-     * key长度 key+value
+     * key长度 key+value eg: 3 keyvalue
      * 第一个空格，获取 key 的长度，然后截取
      * @param cache 缓存
      */

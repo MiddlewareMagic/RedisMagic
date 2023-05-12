@@ -5,7 +5,7 @@ import github.middlewaremagic.redismagic.api.ICache;
 import github.middlewaremagic.redismagic.api.ICacheLoad;
 
 /**
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.7
  */
 public class MyCacheLoad implements ICacheLoad<String,String> {

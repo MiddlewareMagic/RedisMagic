@@ -14,15 +14,13 @@ import java.util.List;
 
 /**
  * 加载策略-文件路径
- * @author binbin.hou
- * @since 0.0.8
+ * @author gaoxiang
  */
 @Slf4j
 public class CacheLoadDbJson<K,V> implements ICacheLoad<K,V> {
 
     /**
      * 文件路径
-     * @since 0.0.8
      */
     private final String dbPath;
 

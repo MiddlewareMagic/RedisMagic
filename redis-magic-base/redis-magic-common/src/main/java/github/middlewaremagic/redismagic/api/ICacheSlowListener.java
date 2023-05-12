@@ -3,7 +3,7 @@ package github.middlewaremagic.redismagic.api;
 /**
  * 慢日志操作接口
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.9
  */
 public interface ICacheSlowListener {

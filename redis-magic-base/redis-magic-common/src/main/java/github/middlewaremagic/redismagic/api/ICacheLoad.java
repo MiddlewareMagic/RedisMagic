@@ -2,7 +2,7 @@ package github.middlewaremagic.redismagic.api;
 
 /**
  * 缓存接口
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.7
  * @param <K> key
  * @param <V> value

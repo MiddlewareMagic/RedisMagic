@@ -13,14 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 缓存持久化-db-基于 JSON
- * @author binbin.hou
- * @since 0.0.8
+ * @author gaoxiang
  */
 public class CachePersistDbJson<K,V> extends CachePersistAdaptor<K,V> {
 
     /**
      * 数据库路径
-     * @since 0.0.8
      */
     private final String dbPath;
 

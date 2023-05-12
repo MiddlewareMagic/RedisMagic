@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 缓存引导类测试
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.2
  */
 public class CacheBsTest {

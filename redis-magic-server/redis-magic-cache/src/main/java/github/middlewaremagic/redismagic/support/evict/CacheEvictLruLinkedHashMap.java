@@ -14,7 +14,7 @@ import java.util.Map;
  * 丢弃策略-LRU 最近最少使用
  *
  * 实现方式：LinkedHashMap
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.12
  */
 @Slf4j

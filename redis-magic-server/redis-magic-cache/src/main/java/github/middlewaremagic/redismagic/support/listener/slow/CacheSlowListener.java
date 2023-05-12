@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 慢日志监听类
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.9
  */
 @Slf4j

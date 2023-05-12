@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * 驱除策略拦截器
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.11
  */
 public class CacheInterceptorEvict<K,V> implements ICacheInterceptor<K, V> {

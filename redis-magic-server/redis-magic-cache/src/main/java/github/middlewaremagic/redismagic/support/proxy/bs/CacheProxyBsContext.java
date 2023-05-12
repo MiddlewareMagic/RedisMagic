@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 /**
  * 代理引导类上下文
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.4
  */
 public class CacheProxyBsContext implements ICacheProxyBsContext {

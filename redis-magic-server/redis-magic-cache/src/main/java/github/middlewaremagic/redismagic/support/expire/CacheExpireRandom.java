@@ -20,8 +20,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 缓存过期-普通策略随机
  *
- * @author binbin.hou
- * @since 0.0.16
+ * @author gaoxiang
  * @param <K> key
  * @param <V> value
  */
@@ -30,7 +29,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
 
     /**
      * 单次清空的数量限制
-     * @since 0.0.16
      */
     private static final int COUNT_LIMIT = 100;
 
@@ -38,25 +36,21 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
      * 过期 map
      *
      * 空间换时间
-     * @since 0.0.16
      */
     private final Map<K, Long> expireMap = new HashMap<>();
 
     /**
      * 缓存实现
-     * @since 0.0.16
      */
     private final ICache<K,V> cache;
 
     /**
      * 是否启用快模式
-     * @since 0.0.16
      */
     private volatile boolean fastMode = false;
 
     /**
      * 线程执行类
-     * @since 0.0.16
      */
     private static final ScheduledExecutorService EXECUTOR_SERVICE = Executors.newSingleThreadScheduledExecutor();
 
@@ -67,7 +61,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
 
     /**
      * 初始化任务
-     * @since 0.0.16
      */
     private void init() {
         EXECUTOR_SERVICE.scheduleAtFixedRate(new ExpireThreadRandom(), 10, 10, TimeUnit.SECONDS);
@@ -75,7 +68,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
 
     /**
      * 定时执行任务
-     * @since 0.0.16
      */
     private class ExpireThreadRandom implements Runnable {
         @Override
@@ -100,7 +92,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
     /**
      * 过期信息
      * @param timeoutMills 超时时间
-     * @since 0.0.16
      */
     private void expireKeys(final long timeoutMills) {
         // 设置超时时间 100ms
@@ -137,7 +128,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
     /**
      * 随机获取一个 key 信息
      * @return 随机返回的 keys
-     * @since 0.0.16
      */
     private K getRandomKey() {
         Random random = ThreadLocalRandom.current();
@@ -151,7 +141,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
     /**
      * 随机获取一个 key 信息
      * @return 随机返回的 keys
-     * @since 0.0.16
      */
     private K getRandomKey2() {
         Random random = ThreadLocalRandom.current();
@@ -177,7 +166,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
      * 批量获取多个 key 信息
      * @param sizeLimit 大小限制
      * @return 随机返回的 keys
-     * @since 0.0.16
      */
     private Set<K> getRandomKeyBatch(final int sizeLimit) {
         Random random = ThreadLocalRandom.current();
@@ -239,7 +227,6 @@ public class CacheExpireRandom<K,V> implements ICacheExpire<K,V> {
      * 过期处理 key
      * @param key key
      * @param expireAt 过期时间
-     * @since 0.0.16
      * @return 是否执行过期
      */
     private boolean expireKey(final K key, final Long expireAt) {

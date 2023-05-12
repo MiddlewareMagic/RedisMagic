@@ -5,7 +5,7 @@ import github.middlewaremagic.redismagic.api.ICacheLoad;
 /**
  *
  * 加载策略工具类
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.7
  */
 public final class CacheLoads {

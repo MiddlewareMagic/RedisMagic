@@ -9,7 +9,7 @@ import java.util.Queue;
 
 /**
  * 丢弃策略-先进先出
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.2
  */
 public class CacheEvictFifo<K,V> extends AbstractCacheEvict<K,V> {

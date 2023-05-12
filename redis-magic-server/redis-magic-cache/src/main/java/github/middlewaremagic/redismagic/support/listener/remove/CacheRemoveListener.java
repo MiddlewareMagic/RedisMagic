@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 默认的删除监听类
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.6
  */
 @Slf4j

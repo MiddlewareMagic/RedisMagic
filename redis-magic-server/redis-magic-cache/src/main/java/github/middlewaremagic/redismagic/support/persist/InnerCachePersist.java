@@ -9,7 +9,7 @@ import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * 内部缓存持久化类
- * @author binbin.hou
+ * @author gaoxiang
  * @param <K> key
  * @param <V> value
  * @since 0.0.8

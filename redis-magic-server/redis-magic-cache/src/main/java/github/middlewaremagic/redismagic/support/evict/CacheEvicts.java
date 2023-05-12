@@ -6,7 +6,7 @@ import github.middlewaremagic.redismagic.api.ICacheEvict;
 /**
  * 丢弃策略
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.2
  */
 public final class CacheEvicts {

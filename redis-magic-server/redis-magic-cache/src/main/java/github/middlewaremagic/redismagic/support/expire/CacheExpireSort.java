@@ -16,8 +16,7 @@ import java.util.concurrent.TimeUnit;
  * 优点：定时删除时不用做过多消耗
  * 缺点：惰性删除不友好
  *
- * @author binbin.hou
- * @since 0.0.3
+ * @author gaoxiang
  * @param <K> key
  * @param <V> value
  */
@@ -25,7 +24,6 @@ public class CacheExpireSort<K,V> implements ICacheExpire<K,V> {
 
     /**
      * 单次清空的数量限制
-     * @since 0.0.3
      */
     private static final int LIMIT = 100;
 
@@ -33,7 +31,6 @@ public class CacheExpireSort<K,V> implements ICacheExpire<K,V> {
      * 排序缓存存储
      *
      * 使用按照时间排序的缓存处理。
-     * @since 0.0.3
      */
     private final Map<Long, List<K>> sortMap = new TreeMap<>(new Comparator<Long>() {
         @Override
@@ -46,7 +43,6 @@ public class CacheExpireSort<K,V> implements ICacheExpire<K,V> {
      * 过期 map
      *
      * 空间换时间
-     * @since 0.0.3
      */
     private final Map<K, Long> expireMap = new HashMap<>();
 

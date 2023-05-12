@@ -4,7 +4,7 @@ import github.middlewaremagic.redismagic.api.ICacheRemoveListener;
 import github.middlewaremagic.redismagic.api.ICacheRemoveListenerContext;
 
 /**
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.6
  */
 public class MyRemoveListener<K,V> implements ICacheRemoveListener<K,V> {

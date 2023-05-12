@@ -13,8 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * 顺序追加模式
  *
  * AOF 持久化到文件，暂时不考虑 buffer 等特性。
- * @author binbin.hou
- * @since 0.0.10
+ * @author gaoxiang
  */
 @Slf4j
 public class CacheInterceptorAof<K,V> implements ICacheInterceptor<K, V> {

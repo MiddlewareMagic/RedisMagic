@@ -4,7 +4,7 @@ import github.middlewaremagic.redismagic.api.ICacheSlowListener;
 import github.middlewaremagic.redismagic.api.ICacheSlowListenerContext;
 
 /**
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.9
  */
 public class MySlowListener implements ICacheSlowListener {

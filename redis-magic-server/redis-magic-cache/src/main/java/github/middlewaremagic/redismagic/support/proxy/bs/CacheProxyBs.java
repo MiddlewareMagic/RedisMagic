@@ -13,8 +13,7 @@ import java.util.List;
 
 /**
  * 代理引导类
- * @author binbin.hou
- * @since 0.0.4
+ * @author gaoxiang
  */
 public final class CacheProxyBs {
 
@@ -22,7 +21,6 @@ public final class CacheProxyBs {
 
     /**
      * 代理上下文
-     * @since 0.0.4
      */
     private ICacheProxyBsContext context;
 
@@ -30,28 +28,24 @@ public final class CacheProxyBs {
      * 默认通用拦截器
      *
      * JDK 的泛型擦除导致这里不能使用泛型
-     * @since 0.0.5
      */
     @SuppressWarnings("all")
     private final List<ICacheInterceptor> commonInterceptors = CacheInterceptors.defaultCommonList();
 
     /**
      * 默认刷新拦截器
-     * @since 0.0.5
      */
     @SuppressWarnings("all")
     private final List<ICacheInterceptor> refreshInterceptors = CacheInterceptors.defaultRefreshList();
 
     /**
      * 持久化拦截器
-     * @since 0.0.10
      */
     @SuppressWarnings("all")
     private final ICacheInterceptor persistInterceptors = CacheInterceptors.aof();
 
     /**
      * 驱除拦截器
-     * @since 0.0.11
      */
     @SuppressWarnings("all")
     private final ICacheInterceptor evictInterceptors = CacheInterceptors.evict();
@@ -59,7 +53,6 @@ public final class CacheProxyBs {
     /**
      * 新建对象实例
      * @return 实例
-     * @since 0.0.4
      */
     public static CacheProxyBs newInstance() {
         return new CacheProxyBs();
@@ -73,7 +66,6 @@ public final class CacheProxyBs {
     /**
      * 执行
      * @return 结果
-     * @since 0.0.4
      * @throws Throwable 异常
      */
     @SuppressWarnings("all")
@@ -109,7 +101,6 @@ public final class CacheProxyBs {
      * @param interceptorContext 上下文
      * @param cache 缓存
      * @param before 是否执行执行
-     * @since 0.0.5
      */
     @SuppressWarnings("all")
     private void interceptorHandler(CacheInterceptor cacheInterceptor,

@@ -4,7 +4,7 @@ import github.middlewaremagic.redismagic.api.ICacheRemoveListenerContext;
 
 /**
  * 删除的监听器
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.6
  */
 public class CacheRemoveListenerContext<K,V> implements ICacheRemoveListenerContext<K,V> {

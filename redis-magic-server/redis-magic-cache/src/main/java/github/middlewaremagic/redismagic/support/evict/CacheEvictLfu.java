@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * 丢弃策略-LFU 最少使用频次
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.14
  */
 @Slf4j

@@ -20,8 +20,7 @@ import java.util.Map;
 
 /**
  * 加载策略-AOF文件模式
- * @author binbin.hou
- * @since 0.0.10
+ * @author gaoxiang
  */
 @Slf4j
 public class CacheLoadAof<K,V> implements ICacheLoad<K,V> {
@@ -30,7 +29,6 @@ public class CacheLoadAof<K,V> implements ICacheLoad<K,V> {
      * 方法缓存
      *
      * 暂时比较简单，直接通过方法判断即可，不必引入参数类型增加复杂度。
-     * @since 0.0.10
      */
     private static final Map<String, Method> METHOD_MAP = new HashMap<>();
 

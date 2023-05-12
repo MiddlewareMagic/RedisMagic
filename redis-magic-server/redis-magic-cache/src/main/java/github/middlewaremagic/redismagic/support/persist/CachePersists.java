@@ -5,8 +5,7 @@ import github.middlewaremagic.redismagic.api.ICachePersist;
 
 /**
  * 缓存持久化工具类
- * @author binbin.hou
- * @since 0.0.8
+ * @author gaoxiang
  */
 public final class CachePersists {
 
@@ -17,7 +16,6 @@ public final class CachePersists {
      * @param <K> key
      * @param <V> value
      * @return 结果
-     * @since 0.0.8
      */
     public static <K,V> ICachePersist<K,V> none() {
         return new CachePersistNone<>();
@@ -29,7 +27,6 @@ public final class CachePersists {
      * @param <V> value
      * @param path 文件路径
      * @return 结果
-     * @since 0.0.8
      */
     public static <K,V> ICachePersist<K,V> dbJson(final String path) {
         return new CachePersistDbJson<>(path);
@@ -41,7 +38,6 @@ public final class CachePersists {
      * @param <V> value
      * @param path 文件路径
      * @return 结果
-     * @since 0.0.10
      */
     public static <K,V> ICachePersist<K,V> aof(final String path) {
         return new CachePersistAof<>(path);

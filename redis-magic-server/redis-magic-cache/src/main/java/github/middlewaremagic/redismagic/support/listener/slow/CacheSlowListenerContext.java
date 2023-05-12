@@ -3,7 +3,7 @@ package github.middlewaremagic.redismagic.support.listener.slow;
 import github.middlewaremagic.redismagic.api.ICacheSlowListenerContext;
 
 /**
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.9
  */
 public class CacheSlowListenerContext implements ICacheSlowListenerContext {

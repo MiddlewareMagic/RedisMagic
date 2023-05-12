@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 丢弃策略-LRU 最近最少使用
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.11
  */
 @Slf4j

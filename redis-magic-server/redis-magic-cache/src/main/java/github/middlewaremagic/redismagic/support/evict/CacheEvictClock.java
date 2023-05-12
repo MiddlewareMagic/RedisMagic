@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 淘汰策略-clock 算法
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.15
  */
 @Slf4j

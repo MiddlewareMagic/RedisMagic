@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
  * 淘汰策略-LRU 最近最少使用
  *
  * 实现方式：Lru2
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.13
  */
 @Slf4j

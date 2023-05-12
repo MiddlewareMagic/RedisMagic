@@ -3,7 +3,7 @@ package github.middlewaremagic.redismagic.api;
 /**
  * 删除监听器接口
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.6
  * @param <K> key
  * @param <V> value

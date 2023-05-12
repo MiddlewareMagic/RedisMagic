@@ -4,7 +4,7 @@ import java.util.Collection;
 
 /**
  * 缓存过期接口
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.3
  */
 public interface ICacheExpire<K,V> {

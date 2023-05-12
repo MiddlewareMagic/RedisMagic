@@ -19,8 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 缓存过期-普通策略
  *
- * @author binbin.hou
- * @since 0.0.3
+ * @author gaoxiang
  * @param <K> key
  * @param <V> value
  */
@@ -28,7 +27,6 @@ public class CacheExpire<K,V> implements ICacheExpire<K,V> {
 
     /**
      * 单次清空的数量限制
-     * @since 0.0.3
      */
     private static final int LIMIT = 100;
 
@@ -36,13 +34,11 @@ public class CacheExpire<K,V> implements ICacheExpire<K,V> {
      * 过期 map
      *
      * 空间换时间
-     * @since 0.0.3
      */
     private final Map<K, Long> expireMap = new HashMap<>();
 
     /**
      * 缓存实现
-     * @since 0.0.3
      */
     private final ICache<K,V> cache;
 
@@ -136,7 +132,7 @@ public class CacheExpire<K,V> implements ICacheExpire<K,V> {
             // 再移除缓存，后续可以通过惰性删除做补偿
             V removeValue = cache.remove(key);
 
-            // 执行淘汰监听器
+            // 执行淘汰监听器 TODO 修改为代理模式实现
             ICacheRemoveListenerContext<K,V> removeListenerContext = CacheRemoveListenerContext.<K,V>newInstance().key(key).value(removeValue).type(CacheRemoveType.EXPIRE.code());
             for(ICacheRemoveListener<K,V> listener : cache.removeListeners()) {
                 listener.listen(removeListenerContext);

@@ -21,14 +21,12 @@ public @interface CacheInterceptor {
      * 2. 慢日志统计
      * etc.
      * @return 默认开启
-     * @since 0.0.5
      */
     boolean common() default true;
 
     /**
      * 是否启用刷新
      * @return false
-     * @since 0.0.5
      */
     boolean refresh() default false;
 

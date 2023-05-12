@@ -6,7 +6,7 @@ import github.middlewaremagic.redismagic.api.ICache;
 import java.lang.reflect.Method;
 
 /**
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.4
  */
 public interface ICacheProxyBsContext {

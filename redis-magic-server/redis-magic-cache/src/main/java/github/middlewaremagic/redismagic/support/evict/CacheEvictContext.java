@@ -10,7 +10,7 @@ import github.middlewaremagic.redismagic.api.ICacheEvictContext;
  * 2. map 实现
  * 3. 淘汰监听器
  *
- * @author binbin.hou
+ * @author gaoxiang
  * @since 0.0.2
  * @param <K> key
  * @param <V> value

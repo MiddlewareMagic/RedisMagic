@@ -21,7 +21,6 @@ import java.util.concurrent.CompletionService;
  * <pre> Project: async  </pre>
  *
  * @author houbinbin
- * @since 0.0.4
  */
 public class DynamicProxy implements InvocationHandler, ICacheProxy {
 
