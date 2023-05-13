@@ -1,7 +1,9 @@
 package github.middlewaremagic.redismagic.test.bean;
 
-import github.middlewaremagic.redismagic.beans.factory.DisposableBean;
-import github.middlewaremagic.redismagic.beans.factory.InitializingBean;
+import github.middlewaremagic.redismagic.beans.BeansException;
+import github.middlewaremagic.redismagic.beans.factory.*;
+import github.middlewaremagic.redismagic.context.ApplicationContext;
+import github.middlewaremagic.redismagic.context.ApplicationContextAware;
 
 /*
  * ClassName: UserService
@@ -9,8 +11,7 @@ import github.middlewaremagic.redismagic.beans.factory.InitializingBean;
  * @Author: zjh
  * @Create: 2023/5/11
  */
-public class UserService implements InitializingBean, DisposableBean {
-
+public class UserService implements BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware {
 
     private String uId;
 
@@ -20,14 +21,28 @@ public class UserService implements InitializingBean, DisposableBean {
 
     private String location;
 
+    private BeanFactory beanFactory;
+
+    private ApplicationContext applicationContext;
+
     @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("执行：UserService.afterPropertiesSet");
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 
     @Override
-    public void destroy() throws Exception {
-        System.out.println("执行：UserService.destroy");
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("Bean Name is：" + name);
+    }
+
+    @Override
+    public void setBeanClassLoader(ClassLoader classLoader) {
+        System.out.println("ClassLoader：" + classLoader);
     }
 
     public String queryUserInfo() {
@@ -65,4 +80,14 @@ public class UserService implements InitializingBean, DisposableBean {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public BeanFactory getBeanFactory() {
+        return beanFactory;
+    }
+
+    public ApplicationContext getApplicationContext() {
+        return applicationContext;
+    }
+
+
 }
