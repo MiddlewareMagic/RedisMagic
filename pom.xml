@@ -13,6 +13,7 @@
         <module>redis-magic-parent</module>
         <module>redis-magic-server</module>
         <module>redis-magic-test</module>
+        <module>redis-magic-ioc</module>
     </modules>
     <version>${revision}</version>
 
