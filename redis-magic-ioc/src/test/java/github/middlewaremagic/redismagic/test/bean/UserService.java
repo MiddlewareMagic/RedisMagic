@@ -1,49 +1,19 @@
 package github.middlewaremagic.redismagic.test.bean;
 
-import github.middlewaremagic.redismagic.beans.BeansException;
-import github.middlewaremagic.redismagic.beans.factory.*;
-import github.middlewaremagic.redismagic.context.ApplicationContext;
-import github.middlewaremagic.redismagic.context.ApplicationContextAware;
-
 /*
  * ClassName: UserService
  * Description:
  * @Author: zjh
  * @Create: 2023/5/11
  */
-public class UserService implements BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware {
-
+public class UserService {
     private String uId;
-
-    private UserDao userDao;
 
     private String company;
 
     private String location;
 
-    private BeanFactory beanFactory;
-
-    private ApplicationContext applicationContext;
-
-    @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        this.beanFactory = beanFactory;
-    }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
-
-    @Override
-    public void setBeanName(String name) {
-        System.out.println("Bean Name is：" + name);
-    }
-
-    @Override
-    public void setBeanClassLoader(ClassLoader classLoader) {
-        System.out.println("ClassLoader：" + classLoader);
-    }
+    private IUserDao userDao;
 
     public String queryUserInfo() {
         return userDao.queryUserName(uId) + "," + company + "," + location;
@@ -55,14 +25,6 @@ public class UserService implements BeanNameAware, BeanClassLoaderAware, Applica
 
     public void setuId(String uId) {
         this.uId = uId;
-    }
-
-    public UserDao getUserDao() {
-        return userDao;
-    }
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
     }
 
     public String getCompany() {
@@ -81,13 +43,11 @@ public class UserService implements BeanNameAware, BeanClassLoaderAware, Applica
         this.location = location;
     }
 
-    public BeanFactory getBeanFactory() {
-        return beanFactory;
+    public IUserDao getUserDao() {
+        return userDao;
     }
 
-    public ApplicationContext getApplicationContext() {
-        return applicationContext;
+    public void setUserDao(IUserDao userDao) {
+        this.userDao = userDao;
     }
-
-
 }
