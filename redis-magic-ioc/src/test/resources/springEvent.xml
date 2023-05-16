@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean class="github.middlewaremagic.redismagic.test.event.ContextRefreshedEventListener"/>
+
+    <bean class="github.middlewaremagic.redismagic.test.event.CustomEventListener"/>
+
+    <bean class="github.middlewaremagic.redismagic.test.event.ContextClosedEventListener"/>
+
+</beans>

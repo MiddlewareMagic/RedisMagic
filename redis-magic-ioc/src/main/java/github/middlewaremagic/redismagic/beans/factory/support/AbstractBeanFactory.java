@@ -1,7 +1,6 @@
 package github.middlewaremagic.redismagic.beans.factory.support;
 
 import github.middlewaremagic.redismagic.beans.BeansException;
-import github.middlewaremagic.redismagic.beans.factory.BeanFactory;
 import github.middlewaremagic.redismagic.beans.factory.FactoryBean;
 import github.middlewaremagic.redismagic.beans.factory.config.BeanDefinition;
 import github.middlewaremagic.redismagic.beans.factory.config.BeanPostProcessor;
